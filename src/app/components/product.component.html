@@ -1,0 +1,8 @@
+<button (click)="showCat1Products()">CAT1</button>
+<button (click)="showCat2Products()">CAT2</button>
+<button (click)="showFavoriteProducts()">Favorite Products</button>
+<ul>
+   <li *ngFor="let product of products$ | async">
+        {{product.id}} - {{product.title}} - {{product.category}}
+   </li>
+</ul>
